@@ -7,14 +7,13 @@ try:
     reg = ['vasya', 'pupkin', 'pupkin_vasya@gmail.com']
     browser = webdriver.Chrome()
     browser.get(link)
-    input1 = browser.find_element(By.CLASS_NAME, 'form-control.first')
+    input1 = browser.find_element(By.CSS_SELECTOR, '.first_block .form-control.first')
     input1.send_keys(reg[0])
-    input1 = browser.find_element(By.CLASS_NAME, 'form-control.second')
+    input1 = browser.find_element(By.CSS_SELECTOR, '.first_block .form-control.second')
     input1.send_keys(reg[1])
-    input1 = browser.find_element(By.CLASS_NAME, 'form-control.third')
+    input1 = browser.find_element(By.CSS_SELECTOR, '.first_block .form-control.third')
     input1.send_keys(reg[2])
     time.sleep(3)
-
 
     # Отправляем заполненную форму
     button = browser.find_element(By.CSS_SELECTOR, "button.btn")
