@@ -16,7 +16,7 @@ def browser():
 
 class TestMainPage1():
 
-    @pytest.mark.smoke
+    @pytest.mark.smoke #py -m pytest -s -v -m smoke test_3_5_1.py запуск в консоли
     def test_guest_should_see_login_link(self, browser):
         browser.get(link)
         browser.find_element(By.CSS_SELECTOR, "#login_link")
